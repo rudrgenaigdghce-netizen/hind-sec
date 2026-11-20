@@ -101,11 +101,6 @@ export const footerColumnsData: FooterColumn[] = [
         href: "/contact",
       },
       {
-        label: "Certifications",
-        fullLabel: "Team Certifications & Standards",
-        href: "/certifications",
-      },
-      {
         label: "Careers",
         fullLabel: "Join the HindSec Team",
         href: "/careers",

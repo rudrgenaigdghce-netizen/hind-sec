@@ -58,25 +58,6 @@ export const whyHindSecMenuItems: MegaMenuItem[] = [
         strokeLinecap="round"
         strokeLinejoin="round"
       >
-        <circle cx="12" cy="8" r="6" />
-        <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
-      </svg>
-    ),
-  },
-  {
-    title: navContent.whyHindSec[2].title,
-    description: navContent.whyHindSec[2].description,
-    href: navContent.whyHindSec[2].href,
-    icon: (
-      <svg
-        className="w-[18px] h-[18px]"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="white"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
         <rect x="2" y="7" width="20" height="14" rx="1" />
         <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
         <path d="M2 13h20" />
@@ -135,7 +116,7 @@ export default function MegaDropdown({
           ? "w-[960px] p-[20px] max-w-[calc(100vw-32px)]"
           : isCompliance
           ? "w-[880px] p-[20px] max-w-[calc(100vw-32px)]"
-          : "w-[625px] h-[272px] p-[8px] flex"
+          : "w-[625px] h-[216px] p-[8px] flex"
       }`}
       role="menu"
       aria-label={`${label} menu`}

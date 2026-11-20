@@ -127,12 +127,6 @@ export const navContent = {
       iconType: "users" as const,
     },
     {
-      title: "Certifications",
-      description: "Skills and standards behind our work",
-      href: "/certifications",
-      iconType: "award" as const,
-    },
-    {
       title: "Careers",
       description: "Join a team focused on real impact",
       href: "/careers",
@@ -911,46 +905,6 @@ export const careersContent = {
   ],
 };
 
-/**
- * CERTIFICATIONS & STANDARDS DATA
- * IMPORTANT TRUTH RULE:
- * Only certifications the team truly holds may be listed here!
- * Replace this array with actual certifications verified by your security team.
- */
-export const certificationsContent = {
-  label: "CERTIFICATIONS",
-  heading: "Skills and standards behind our work",
-  subtitle:
-    "We adhere strictly to internationally recognized offensive security methodologies and verifiable assessment standards.",
-  // PLACEHOLDER: Replace team certifications with real team credentials
-  items: [
-    {
-      id: "team-certs",
-      title: "Team certifications",
-      description:
-        "OSCP, CEH, CRTP, eJPT (PLACEHOLDER: Replace with the certifications your team really holds. Testing is performed by qualified offensive security practitioners.)",
-    },
-    {
-      id: "methodologies",
-      title: "Methodologies we follow",
-      description:
-        "OWASP Testing Guide (WSTG & MASTG), PTES (Penetration Testing Execution Standard), NIST SP 800-115, and MITRE ATT&CK framework.",
-    },
-    {
-      id: "scoring",
-      title: "Severity scoring",
-      description:
-        "CVSS v3.1 and CVSS v4.0 standard scoring to provide objective, repeatable vulnerability risk ratings aligned with industry standards.",
-    },
-    {
-      id: "compliance",
-      title: "Compliance support",
-      description:
-        "Testing reports designed to support compliance audits and security reviews including ISO 27001, PCI DSS, SOC 2, DPDP Act, and NIST guidelines.",
-    },
-  ],
-};
-
 export const contactInfo = {
   email: "hello@hindsec.com", // Official business email
   phone: "+1 (123) 456-7890", // Scoping consultation phone
@@ -1024,7 +978,6 @@ export const footerContent = {
     company: [
       { title: "About", href: "/about" },
       { title: "Contact", href: "/contact" },
-      { title: "Certifications", href: "/certifications" },
       { title: "Careers", href: "/careers" },
     ],
   },

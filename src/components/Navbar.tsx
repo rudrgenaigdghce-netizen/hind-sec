@@ -25,7 +25,7 @@ export default function Navbar({ theme }: NavbarProps = {}) {
   const isServicesActive = pathname === "/services" || (pathname.startsWith("/services/") && pathname !== "/services/vapt-compliance-services");
   const isComplianceActive = pathname === "/compliance" || pathname === "/services/vapt-compliance-services";
   const isWhyActive =
-    pathname === "/about" || pathname === "/certifications" || pathname === "/careers";
+    pathname === "/about" || pathname === "/careers";
   const isContactActive = pathname === "/contact";
 
   const [scrolled, setScrolled] = useState(false);
