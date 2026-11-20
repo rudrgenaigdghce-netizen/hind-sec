@@ -13,12 +13,13 @@ interface ServiceCardProps {
 export default function ServiceCard({ service, index }: ServiceCardProps) {
   return (
     <motion.div
+      id={service.slug}
       initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.35, delay: (index % 4) * 0.05 }}
       whileHover={{ y: -3 }}
-      className="group relative flex flex-col justify-between bg-white border border-[#e2e4e8] p-6 lg:p-7 rounded-none transition-shadow duration-200 hover:shadow-md focus-within:ring-2 focus-within:ring-black"
+      className="scroll-mt-28 group relative flex flex-col justify-between bg-white border border-[#e2e4e8] p-6 lg:p-7 rounded-none transition-shadow duration-200 hover:shadow-md focus-within:ring-2 focus-within:ring-black"
     >
       <div>
         {/* Icon square badge: matching HindSEC 32x32 / 36x36 dark tile styling */}

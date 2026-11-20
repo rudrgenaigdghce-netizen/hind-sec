@@ -202,7 +202,7 @@ export default function MegaDropdown({
                     {category.services.map((service) => (
                       <li key={service.slug}>
                         <Link
-                          href={`/services/${category.slug}#services-grid`}
+                          href={`/services/${category.slug}#${service.slug}`}
                           onClick={onClose}
                           className="text-[11.5px] text-[#4a4f5a] hover:text-[#0a0a0a] hover:font-medium block py-0.5 truncate transition-colors focus:outline-none focus-visible:underline"
                           title={service.title}

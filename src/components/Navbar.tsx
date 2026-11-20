@@ -81,6 +81,12 @@ export default function Navbar({ theme }: NavbarProps = {}) {
     return () => observer.disconnect();
   }, [pathname]);
 
+  // Close any open dropdowns or mobile drawer whenever route changes
+  useEffect(() => {
+    setActiveDropdown(null);
+    setMobileMenuOpen(false);
+  }, [pathname]);
+
   const updatePanelPosition = (menu: "services" | "compliance" | "why") => {
     if (!navRef.current) return;
     const navRect = navRef.current.getBoundingClientRect();
@@ -518,7 +524,7 @@ export default function Navbar({ theme }: NavbarProps = {}) {
                                 {cat.services.map((svc) => (
                                   <Link
                                     key={svc.slug}
-                                    href={`/services/${cat.slug}#services-grid`}
+                                    href={`/services/${cat.slug}#${svc.slug}`}
                                     className="block text-[12px] text-white/70 hover:text-white py-0.5 truncate"
                                     onClick={() => setMobileMenuOpen(false)}
                                   >
