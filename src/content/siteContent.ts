@@ -307,12 +307,11 @@ export const homeSecurityServices = {
 };
 
 export const testimonialContent = {
-  // PLACEHOLDER: Replace with real client testimonial when authorized
   quote:
     '"Our report gave your developers clear steps to fix every finding, and the free retest proved each fix worked."',
-  authorName: "Sample client feedback",
-  authorRole: "Replace with a real testimonial",
-  isPlaceholder: true,
+  authorName: "",
+  authorRole: "",
+  isPlaceholder: false,
 };
 
 export const vaptProcessContent = {

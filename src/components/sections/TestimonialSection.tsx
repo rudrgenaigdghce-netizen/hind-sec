@@ -97,21 +97,27 @@ export default function TestimonialSection({
           })}
         </div>
 
-        {/* Below Quote: Author Name & Role */}
-        <motion.div
-          initial={{ opacity: 0, y: 14 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-[24px] sm:mt-[36px] flex flex-col items-center"
-        >
-          <span className={authorNameClass}>
-            {authorName}
-          </span>
-          <span className="text-[15px] sm:text-[18px] font-normal text-[#4a4f5a] mt-[3px]">
-            {authorRole}
-          </span>
-        </motion.div>
+        {/* Below Quote: Author Name & Role (only rendered when provided) */}
+        {(authorName || authorRole) ? (
+          <motion.div
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mt-[24px] sm:mt-[36px] flex flex-col items-center"
+          >
+            {authorName && (
+              <span className={authorNameClass}>
+                {authorName}
+              </span>
+            )}
+            {authorRole && (
+              <span className="text-[15px] sm:text-[18px] font-normal text-[#4a4f5a] mt-[3px]">
+                {authorRole}
+              </span>
+            )}
+          </motion.div>
+        ) : null}
       </div>
     </section>
   );
