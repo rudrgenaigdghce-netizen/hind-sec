@@ -18,14 +18,9 @@ export interface NavbarProps {
 
 export default function Navbar({ theme }: NavbarProps = {}) {
   const pathname = usePathname();
-  const isLight =
-    theme === "light" ||
-    pathname === "/about" ||
-    pathname === "/careers" ||
-    pathname === "/contact" ||
-    pathname === "/compliance" ||
-    pathname === "/services" ||
-    pathname.startsWith("/services/");
+  const isHome = pathname === "/";
+  // Always dark header to guarantee full logo contrast and high-visibility branding across all pages
+  const isLight = false;
 
   const isServicesActive = pathname === "/services" || (pathname.startsWith("/services/") && pathname !== "/services/vapt-compliance-services");
   const isComplianceActive = pathname === "/compliance" || pathname === "/services/vapt-compliance-services";
@@ -182,12 +177,10 @@ export default function Navbar({ theme }: NavbarProps = {}) {
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-[250ms] ${
         scrolled
-          ? isLight
-            ? isOverWhite
-              ? "bg-white/85 backdrop-blur-md border-b border-[#e2e4e8] shadow-sm"
-              : "bg-[#f0f1f3]/85 backdrop-blur-md border-b border-[#e2e4e8] shadow-sm"
-            : "bg-[#02030a]/75 backdrop-blur-md border-b border-white/[0.09] shadow-lg shadow-black/25"
-          : "bg-transparent border-b border-transparent"
+          ? "bg-[#02030a]/92 backdrop-blur-md border-b border-white/[0.09] shadow-lg shadow-black/25"
+          : isHome
+          ? "bg-transparent border-b border-transparent"
+          : "bg-[#02030a]/95 backdrop-blur-md border-b border-white/[0.08] shadow-md shadow-black/20"
       }`}
     >
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-0 h-[72px] sm:h-[84px] lg:h-[94px] flex items-center justify-between">
